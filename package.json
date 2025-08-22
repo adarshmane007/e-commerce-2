@@ -1,0 +1,9 @@
+{
+  "name": "ecommerce-pern-app-root",
+  "version": "1.0.0",
+  "description": "Root placeholder for DigitalOcean App Platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Root placeholder'"
+  }
+}
