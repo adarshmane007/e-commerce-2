@@ -1,0 +1,21 @@
+name: ecommerce-pern-app
+services:
+  - name: backend
+    source_dir: back-end
+    run_command: npm start
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        value: ${DATABASE_URL}
+      - key: JWT_SECRET
+        scope: RUN_TIME
+        value: ${JWT_SECRET}
+      - key: PORT
+        scope: RUN_TIME
+        value: 8080
+
+  - name: frontend
+    source_dir: front-end
+    run_command: npm run build
+    static_sites:
+      - build_dir: build
